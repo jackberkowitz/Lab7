@@ -31,7 +31,6 @@ int main(void)
 		{
 			for(int i=1;i<=36;i++) //CW 270 degrees (270/7.5 step = 36)
 			{
-				
 				step_CW(); //clockwise step
 				wait(50,2); //delay so motor doesn't skip steps
 				PORTB = 0b11111110; //turn LED 0 turn (PB0)
@@ -39,18 +38,17 @@ int main(void)
 			
 			wait(500,2); //pause for half a second
 			
-			for(int k=1; k<=12,k++) //CCW 90 degrees (90/7.5 step = 12)
+			for(int k=1;k<=12;k++) //CCW 90 degrees (90/7.5 step = 12)
 			{
-					step_CCW(); //counterclockwise step
-					wait(50,2); //delay so motor doesn't skip steps
-					PORTB = 0b11111101; //turn LED 1 on (PB1)
+				step_CCW(); //counterclockwise step
+				wait(50,2); //delay so motor doesn't skip steps
+				PORTB = 0b11111101; //turn LED 1 on (PB1)
 			}
 			
 			wait(500,2); //pause for half a second
 			
 			for(int j=1;j<=24;j++) //CW 180 degrees (180/7.5 step = 24)
 			{
-				
 				step_CW(); //clockwise step
 				wait(50,2); //delay so motor doesn't skip steps
 				PORTB = 0b11111110; //turn LED 0 turn (PB0)
